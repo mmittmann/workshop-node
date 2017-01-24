@@ -1,16 +1,13 @@
 const express = require('express');
 const app = express();
-const fs = require('fs');
 const middleware = require('./log-middleware');
+
+app.use('view engine', 'pug');
 
 app.use(middleware);
 
 app.get('/', (req, res) => {
-    fs.readFile('./views/index.html', 'UTF-8', (err, content) => {
-        if (err) res.status(500).send('Ocorreu um erro');
-
-        res.status(200).send(content);
-    });
+    app.render('index');
 });
 
 app.get('/contato', (req, res) => {
