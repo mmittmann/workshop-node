@@ -9,7 +9,9 @@
   "author": "Murilo Mittmann",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.16.0",
     "express": "^4.14.0",
+    "mongoose": "^4.7.8",
     "pug": "^2.0.0-beta7"
   }
 }

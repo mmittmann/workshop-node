@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    h1 Cadastrar desenvolver
+    hr
+    form(method='POST' action='/desenvolvedores')
+        input(type='text' name='nome' placeholder='Nome')
+        input(type='text' name='email' placeholder='E-mail')
+        input.btn.btn-success(type='submit' value='Enviar')

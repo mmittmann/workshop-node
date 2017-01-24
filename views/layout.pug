@@ -1,5 +1,19 @@
 html
 head
+    link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
 body
-    h1 Nome da nossa
-        span Empresa
+    div.container
+        h1 Nome da nossa 
+            span Empresa
+        
+        ul
+            li
+                a(href='/') Home
+            li
+                a(href='/sobre') Sobre
+            li
+                a(href='/contato') Contato
+            li
+                a(href='/cadastrar') Cadastrar
+
+        block content
