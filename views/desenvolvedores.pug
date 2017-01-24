@@ -3,6 +3,8 @@ block content
     ul
         each desenvolvedor in desenvolvedores
             li #{desenvolvedor.nome} - #{desenvolvedor.email}
+        else
+            p Não tem nenhum desenvolvedor cadastrado
 
     br
     a(href='/cadastrar') Cadastrar novo

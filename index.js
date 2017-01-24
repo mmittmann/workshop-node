@@ -66,6 +66,15 @@ app.route('/desenvolvedores')
             });
     });
 
+app.get('/sortear', (req, res) => {
+    var randomNumber = Math.floor((Math.random() * 8) + 1);
+
+    Desenvolvedores.findOne({ indice: randomNumber }, (err, dev) => {
+        res.render('sortear', { dev: dev });
+    });
+
+});
+
 app.listen(3001, () => {
     console.log('Você está rodando a aplicação na porta 3001');
 });
